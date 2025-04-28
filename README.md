@@ -54,8 +54,7 @@ Being bitten by a shark decreases the players score by 3 points and being stung 
 - Shark Hurt sound: https://uppbeat.io/sfx/t-rex-grunt/6166/20971 
 - Jellyfish shock sound: https://pixabay.com/sound-effects/search/electric%20shock/ 
 - Shark Bite sound: https://www.myinstants.com/en/instant/chomp-55139/ 
-- Coin Collected sound: https://www.myinstants.com/en/instant/coin
-- mario/#google_vignette 
+- Coin Collected sound: https://www.myinstants.com/en/instant/coinmario/#google_vignette 
 - Treasure Chest Sprites: https://static.vecteezy.com/system/resources/previews/016/139/595/non_2x/cartoon-treasure-chest-box-animation-pirate-loot-vector.jpg 
 - Submarine Sprite: https://ih1.redbubble.net/image.225187163.4569/st,medium,507x507pad,600x600,f8f8f8.u2.webp 
 
