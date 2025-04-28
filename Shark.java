@@ -177,29 +177,6 @@ public class Shark {
                 y = y + dy;
             }
         }
-
-        /*
-         * if (Math.abs(x - player.getX()) < 200 && !soundPlayed) {
-         * soundManager.playClip("jaws", true);
-         * soundPlayed = true;
-         * }
-         * 
-         * if (Math.abs(x - player.getX()) > 200 && soundPlayed) {
-         * soundManager.stopClip("jaws");
-         * soundPlayed = false;
-         * }
-         * 
-         * if (Math.abs(y - player.getY()) < 200 && !soundPlayed) {
-         * soundManager.playClip("jaws", true);
-         * soundPlayed = true;
-         * }
-         * 
-         * if (Math.abs(y - player.getY()) > 200 && soundPlayed) {
-         * soundManager.stopClip("jaws");
-         * soundPlayed = false;
-         * }
-         */
-
     }
 
     public Rectangle2D.Double getBoundingRectangle() {
