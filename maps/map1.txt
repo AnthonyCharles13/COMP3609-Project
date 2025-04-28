@@ -17,7 +17,7 @@ GGAC        O O                     O                          BAAAHGGGF
 GDF        BAAC        O                      O     K         EDDDGGGF     
 I                     AAA    K              BAAAC                 JGI K
 I O     K                              K    JGHGI           K     EDF         O
-GAAAAC                  T      O                       O                   BAA
+GAAAAC                          O                       O                   BAA
 I              O               BAC           O         BAC                 JGGH
 I O    O      BAC     O   O    JHI    O            O           O          BGGGG
 AAAAAAHAAAAAAAGHGAAAAAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAAAAHHAGGGGG
