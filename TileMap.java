@@ -412,7 +412,6 @@ public class TileMap {
             lvl1Score = score;
         }
 
-        // Update spears
         ArrayList<HarpoonSpear> spears = player.getSpears();
         for (HarpoonSpear spear : spears) {
             spear.update();
@@ -424,7 +423,6 @@ public class TileMap {
                 sharkDropped = false;
             }
 
-            // Add jellyfish collision check
             Iterator<JellyFish> jellyIter = jellyfishList.iterator();
             while (jellyIter.hasNext()) {
                 JellyFish jelly = jellyIter.next();
@@ -432,7 +430,7 @@ public class TileMap {
                     spear.setActive(false);
                     jelly.deactivate();
                     jellyIter.remove();
-                    score += 3; // Points for killing jellyfish
+                    score += 3;
                     break;
                 }
             }
@@ -514,14 +512,13 @@ public class TileMap {
             }
         }
 
-        // Check jellyfish collisions
         Iterator<JellyFish> jellyIter = jellyfishList.iterator();
         while (jellyIter.hasNext()) {
             JellyFish jelly = jellyIter.next();
             jelly.update();
             if (jelly.checkCollision(playerRect)) {
                 if (jelly.DamageStatus()) {
-                    score = Math.max(0, score - 2); // Lose 2 points, minimum 0
+                    score = Math.max(0, score - 2);
                     jelly.Electrocute();
                     jelly.setLastCollisionTime(System.currentTimeMillis());
                     jelly.setDamageStatus(false);
@@ -574,11 +571,9 @@ public class TileMap {
     }
 
     private void drawGameOverScreen(Graphics2D g2) {
-        // Dark overlay
         g2.setColor(new Color(0, 0, 0, 200));
         g2.fillRect(0, 0, screenWidth, screenHeight);
 
-        // Game Over text
         g2.setColor(Color.RED);
         g2.setFont(new Font("Arial", Font.BOLD, 48));
 
@@ -586,7 +581,6 @@ public class TileMap {
         int textWidth = g2.getFontMetrics().stringWidth(gameOverText);
         g2.drawString(gameOverText, ((screenWidth - screenWidth/2) - textWidth/ 2), screenHeight / 2);
 
-        // Score text
         String scoreText = "Final Score: " + score;
         g2.setFont(new Font("Arial", Font.PLAIN, 36));
         textWidth = g2.getFontMetrics().stringWidth(scoreText);

@@ -8,7 +8,7 @@ public class HarpoonSpear {
     private static final int HEIGHT = 16;
     
     private int x, y;
-    private int direction; // 1 = left, 2 = right
+    private int direction;
     private boolean active;
     private Image image;
     private GameWindow window;
@@ -25,7 +25,6 @@ public class HarpoonSpear {
     public void update() {
         if (!active) return;
         
-        // Move spear
         x += (direction == 2) ? SPEED : -SPEED;
         
         // Check screen bounds
@@ -37,7 +36,7 @@ public class HarpoonSpear {
     public void draw(Graphics2D g2, int offsetX, int offsetY) {
         if (!active) return;
         
-        if (direction == 1) { // Flip image if facing left
+        if (direction == 1) { 
             g2.drawImage(image, 
                          x + offsetX + WIDTH, y + offsetY, 
                          -WIDTH, HEIGHT, null);

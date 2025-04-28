@@ -54,7 +54,6 @@ public class TileMapManager {
             }
         }
 
-        // parse the lines to create a TileMap
         mapHeight = lines.size();
 
         TileMap newMap = new TileMap(window, mapWidth, mapHeight);
@@ -107,26 +106,6 @@ public class TileMapManager {
                 if (tile >= 0 && tile < tiles.size()) {
                     newMap.setTile(x, y, tiles.get(tile));
                 }
-
-                
-                /*
-                 * // check if the char represents a sprite
-                 * else if (ch == 'o') {
-                 * addSprite(newMap, coinSprite, x, y);
-                 * }
-                 * else if (ch == '!') {
-                 * addSprite(newMap, musicSprite, x, y);
-                 * }
-                 * else if (ch == '*') {
-                 * addSprite(newMap, goalSprite, x, y);
-                 * }
-                 * else if (ch == '1') {
-                 * addSprite(newMap, grubSprite, x, y);
-                 * }
-                 * else if (ch == '2') {
-                 * addSprite(newMap, flySprite, x, y);
-                 * }
-                 */
             }
         }
         newMap.setCoins(coins);

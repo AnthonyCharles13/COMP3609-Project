@@ -96,7 +96,6 @@ public class JellyFish {
         active = false;
     }
 
-    // Getters for position if needed
     public int getX() {
         return x;
     }

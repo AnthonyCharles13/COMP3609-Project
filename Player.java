@@ -67,7 +67,7 @@ public class Player {
 		playerHeight = 100;
 
 		spears = new ArrayList<>();
-		currentDirection = 2; // Track facing direction
+		currentDirection = 2;
 
 	}
 
@@ -347,7 +347,6 @@ public class Player {
 
 	public int getCurrentDirection() { return currentDirection; }
 
-	// Add cleanup for expired spears
 	public void updateSpears() {
 		spears.removeIf(spear -> !spear.isActive());
 	}
