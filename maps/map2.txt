@@ -1,0 +1,23 @@
+# Map file fr tile-based game
+# (Lines that start with '#' are cmments)
+# The tiles are:
+#   (Space) Empty tile
+#   A..Z    Tiles A thrugh J
+#          Cin
+#   K       Jellyfish
+#   T       Treasure Chest
+#   S       Submarine
+GGGGHGGGGGGGHGGGGGGGGGHGGGHGGGGGGGGGGGHGGGHGGGGGGHGGGHGGGGGGGHGGGGGGGGGHGGG
+GGGGGGGGHGGGGGGGGHGHGGGGGGGGGGHGGGGGGGGGGGGGGGGHGGGGGGGGGHGGGGGGGGGGGGHGGGG
+DDDDDDDDDHDGGGGDDHDDDDGGGGDDDHDDDGGGGGDDHDDDDGGHGDDDDDDDDDHDDDDDDHHDDDDDHD
+I          BAAAC      HDF       EGHI        GD         K      JI
+I                                 GHA                         JI
+I         K    K         EHDAC     EF               JHAAAAC        S
+GGAC                                           BAAAHGGGDK     
+GDDF      BAAC                     K      EDDGGHGDF          
+I           EDF   K           BAAAC            JGI   K           
+I    K                       K    JAHAI         K       EDF       
+GAAAAC                                                         BAC
+I                            BAC                   BAC         JGGH
+I              BAC          JHI                                JGGGI
+AAAAAAHAAAAAAAGHGAAAAAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAAAAHHA
