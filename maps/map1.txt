@@ -12,8 +12,8 @@ GGGGGGGGHGGGGGGGGHGHGGGGGGGGGGHGGGGGGGGGGGGGGGGHGGGGGGGGGHGGGGGGGGGGGGHGGGGGHGG
 DDDDDDDDDHDGGGGDDHDDDDDGGGDDDHDDDDDGGGDDHDDDDGGHGDDDDODDDDDHDDDDDDHHDDDDDHDDDDD
 I          EDDF        EDF O       JGIO      EDF     O    K       JI
 I                                 OJGI                            JI  T
-IO            K        K          EHDF      K                  OO JGAAAAC 
-GGAC        O O                     O                          BAAAHGGGF
+IO            K        K          EHDF      K      BC          OO JGAAAAC 
+GGAC        O O                     O              EF          BAAAHGGGF
 GDF        BAAC        O                      O     K         EDDDGGGF     
 I                     AAA    K              BAAAC                 JGI K
 I O     K                              K    JGHGI           K     EDF         O

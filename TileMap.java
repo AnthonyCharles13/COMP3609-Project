@@ -53,6 +53,8 @@ public class TileMap {
     private boolean gameWon = false;
     private boolean gameOver = false;
     private int lvl1Score = 0;
+    private ArrayList<Shark> sharks;
+    private boolean sharksActive;
 
     /**
      * Creates a new TileMap with the specified width and
@@ -121,6 +123,11 @@ public class TileMap {
 
     public ArrayList<Submarine> getSubmarines() {
         return submarines;
+    }
+
+    public void setSharks(ArrayList<Shark> sharks) {
+        this.sharks = sharks;
+        this.sharksActive = !sharks.isEmpty();
     }
 
     /**
@@ -267,6 +274,14 @@ public class TileMap {
 
         if (shark != null && sharkDropped) {
             shark.draw(g2, offsetX, offsetY);
+        }
+
+        if (sharksActive) {
+            for (Shark shark : sharks) {
+                if (shark.isActive()) {
+                    shark.draw(g2, offsetX, offsetY);
+                }
+            }
         }
 
         for (HarpoonSpear spear : player.getSpears()) {
@@ -467,6 +482,27 @@ public class TileMap {
             }
         }
 
+        if (sharksActive) {
+            Iterator<Shark> sharkIter = sharks.iterator();
+            while (sharkIter.hasNext()) {
+                Shark shark = sharkIter.next();
+                shark.update();
+                
+                // Handle shark-player collision
+                if (shark.getBoundingRectangle().intersects(player.getBoundingRectangle())) {
+                    handleSharkCollision(shark);
+                }
+                
+                // Handle shark-spear collisions
+                handleSharkSpearCollisions(shark);
+                
+                if (!shark.isActive()) {
+                    sharkIter.remove();
+                }
+            }
+            sharksActive = !sharks.isEmpty();
+        }
+
         Iterator<Coin> coinIter = coins.iterator();
         while (coinIter.hasNext()) {
             Coin coin = coinIter.next();
@@ -610,6 +646,34 @@ public class TileMap {
 
     public int getlvl1score() {
         return lvl1Score;
+    }
+
+    private void handleSharkCollision(Shark shark) {
+        if (shark.DamageStatus()) {
+            numLives = Math.max(0, numLives - 1);
+            player.playHurtSound();
+            shark.sharkBite();
+            score = Math.max(0, score - 3);
+            shark.setLastCollisionTime(System.currentTimeMillis());
+            shark.setDamageStatus(false);
+            shark.increaseSharkSpeed();
+        } else {
+            shark.restoreDamage();
+        }
+    }
+
+    private void handleSharkSpearCollisions(Shark shark) {
+        Iterator<HarpoonSpear> spearIter = player.getSpears().iterator();
+        while (spearIter.hasNext()) {
+            HarpoonSpear spear = spearIter.next();
+            if (spear.getBoundingBox().intersects(shark.getBoundingRectangle())) {
+                spear.setActive(false);
+                shark.deactivate();
+                score += 5;
+                spearIter.remove();
+                break;
+            }
+        }
     }
 
 }

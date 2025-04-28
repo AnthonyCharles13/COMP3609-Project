@@ -11,13 +11,13 @@ GGGGHGGGGGGGHGGGGGGGGGHGGGHGGGGGGGGGGGHGGGHGGGGGGHGGGHGGGGGGGHGGGGGGGGGHGG
 GGGGGGGGHGGGGGGGGHGHGGGGGGGGGGHGGGGGGGGGGGGGGGGHGGGGGGGGGHGGGGGGGGGGGGHGGG
 DDDDDDDDDHDGGGGDDHDDDDGGGGDDDHDDDGGGGGDDHDDDDGGHGDDDDDDDDDHDDDDDDHHDDDDDHD
 I          BAAAC      HDF       EGHI        GD         K      JI
-I                                 GHA                         JI
+I                                 GHA     X                   JI
 I         K    K         EHDAC     EF               JHAAAAC        S
 GGAC                                           BAAAHGGGDK     
-GDDF      BAAC                     K      EDDGGHGDF          
-I           EDF   K           BAAAC            JGI   K           
+GDDF      BAAC                     K      EDDGGHGDF              X
+I           EDF   K           BAAAC            JGI   K          
 I    K                       K    JAHAI         K       EDF       
 GAAAAC                                                         BAC
 I                            BAC                   BAC         JGGH
-I              BAC          JHI                                JGGGI
+I              BAC          JHI                    X           JGGGI
 AAAAAAHAAAAAAAGHGAAAAAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAAAAHHA

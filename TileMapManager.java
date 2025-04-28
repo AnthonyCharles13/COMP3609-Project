@@ -31,6 +31,7 @@ public class TileMapManager {
         ArrayList<JellyFish> jellyfishList = new ArrayList<>();
         ArrayList<TreasureChest> chests = new ArrayList<>();
         ArrayList<Submarine> submarines = new ArrayList<>();
+        ArrayList<Shark> sharks = new ArrayList<>();
         ArrayList<String> lines = new ArrayList<String>();
         int mapWidth = 0;
         int mapHeight = 0;
@@ -95,6 +96,13 @@ public class TileMapManager {
                     continue;
                 }
 
+                if (ch == 'X') {
+                    int px = TileMap.tilesToPixels(x);
+                    int py = TileMap.tilesToPixels(y) + newMap.getOffsetY();
+                    sharks.add(new Shark(window, px, py, newMap.getPlayer()));
+                    continue;
+                }
+
                 int tile = ch - 'A';
                 if (tile >= 0 && tile < tiles.size()) {
                     newMap.setTile(x, y, tiles.get(tile));
@@ -125,6 +133,7 @@ public class TileMapManager {
         newMap.setJellyFish(jellyfishList);
         newMap.setTreasureChests(chests);
         newMap.setSubmarines(submarines);
+        newMap.setSharks(sharks);
         return newMap;
     }
 

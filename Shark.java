@@ -52,6 +52,7 @@ public class Shark {
     private long distractionStartTime;
     private static final long DISTRACTION_DURATION = 5000;
     private int num;
+    private boolean active = true;
 
     public Shark(JFrame w, int xPos, int yPos, Player player) {
         soundManager = SoundManager.getInstance();
@@ -190,7 +191,7 @@ public class Shark {
         Rectangle2D.Double myRect = getBoundingRectangle();
         Rectangle2D.Double playerRect = player.getBoundingRectangle();
 
-        return myRect.intersects(playerRect);
+        return active && canDamage && myRect.intersects(playerRect);
     }
 
     public void increaseSharkSpeed() {
@@ -282,5 +283,12 @@ public class Shark {
         }
     }
 
+    public boolean isActive() {
+        return active;
+    }
+    
+    public void deactivate() {
+        active = false;
+    }
 
 }
